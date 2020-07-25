@@ -1,0 +1,35 @@
+.typeTitle{
+    color:rgb(120, 183, 185);
+    margin: 20px 0 0 20px;
+
+}
+.codeTitle{
+    margin: 20px 0 10px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+pre{
+    /* text-align: center; */
+    display: flex;
+    justify-content:center ;
+    background-color: cornflowerblue;
+    margin: 40px;
+    border-radius: 18px;
+    font-size: 16px;
+    color:rgb(191, 230, 102);
+    display: none;
+
+}
+code{
+    margin-top: 10px;
+}
+.describe{
+    padding:20px 20px 20px 20px;
+}
+.fontP{
+    font-size: 20px;
+    padding: 5px 20px;
+    border-radius: 8px;
+}
