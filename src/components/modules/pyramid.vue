@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <div class="typeTitle">菱形</div>
+    <div class="typeTitle">菱形11</div>
     <div class="describe">
         <p class='fontP tip1'>无背景色</p>
         <div class="codeTitle" @click="changeShow('myPre1')">{{getTitle}}代码</div>
