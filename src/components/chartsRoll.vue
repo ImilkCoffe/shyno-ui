@@ -4,7 +4,7 @@
     <div id="shyCharts"></div>
     <div class="describe">
       <div class="rich-text-test">
-        <div class="codeTitle" @click="changeShow('myPre1')">{{getTitle}}代码</div>
+        <div id='codeTitle0' class="codeTitle" @click="changeShow('myPre1','codeTitle0')">查看代码</div>
         <pre id="myPre1">
       <code>
          chartsInit: function () {
@@ -106,7 +106,7 @@
     <div id="shyCharts1"></div>
     <div class="describe">
       <div class="rich-text-test">
-        <div class="codeTitle" @click="changeShow('myPre2')">{{getTitle}}代码</div>
+        <div id='codeTitle1' class="codeTitle" @click="changeShow('myPre2','codeTitle1')">查看代码</div>
         <pre id="myPre2">
       <code>
  chartsInit1: function () {
@@ -230,6 +230,7 @@
   </div>
 </template>
 <script>
+// import mapMutations from 'vuex'
 export default {
   name: 'charts_roll',
   data () {
@@ -253,13 +254,15 @@ export default {
     this.chartsInit1()
   },
   computed: {
-    getTitle () {
-      return this.$store.getters.getTitle
+    getTitle (index) {
+      return this.$store.getters.getTitle(index)
     }
   },
   methods: {
-    changeShow: function (key) {
-      this.$store._mutations.showCode[0](key)
+    // ...mapMutations(['showCode']),
+    changeShow: function (key, titleKey) {
+      console.log('你好', key, titleKey)
+      this.Common.showCode(key, titleKey)
     },
     chartsInit: function () {
       var echarts = require('echarts')

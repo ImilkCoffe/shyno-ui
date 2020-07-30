@@ -1,28 +1,15 @@
 const commonJs = {
-  title: '查看',
-  isShow: true,
-  showCode: function (key, bol, title) {
+  showCode: function (key, titleKey) {
     const code = document.getElementById(key)
-    if (bol || this.isShow) {
+    const titleCode = document.getElementById(titleKey)
+    if (titleCode.innerText === '查看代码') {
       code.style.display = 'block'
-      this.isShow = false
-      console.log('lll', this.title)
-      if (title) {
-        title = '收起'
-      } else {
-        this.title = '收起'
-      }
-      console.log('lll', this.title)
-    } else {
-      console.log('222', this.title)
+      titleCode.innerText = '收起代码'
+    } else if (titleCode.innerText === '收起代码') {
       code.style.display = 'none'
-      this.isShow = true
-      if (title) {
-        title = '查看'
-      } else {
-        this.title = '查看'
-      }
-      console.log('222', this.title)
+      titleCode.innerText = '查看代码'
+    } else {
+
     }
   }
 }

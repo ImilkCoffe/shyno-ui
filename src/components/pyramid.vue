@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <Pyramid></Pyramid>
+    <Pyramid :msgData='msg'></Pyramid>
   </div>
 </template>
 

@@ -3,7 +3,7 @@
     <div class="typeTitle">颜色渐变</div>
     <div class="describe">
         <p class='fontP tip1'>无背景色</p>
-        <div class="codeTitle" @click="changeShow('myPre1')">{{getTitle}}代码</div>
+        <div id='codeTitle0' class="codeTitle" @click="changeShow('myPre1','codeTitle0')">查看代码</div>
         <pre id="myPre1">
           <code>
            html代码: {{htmlText[0]}}
@@ -23,7 +23,7 @@
       </code>
     </pre>
        <p class='fontP bg'><span class="tip2">有背景色</span></p>
-        <div class="codeTitle" @click="changeShow('myPre2')">{{getTitle}}代码</div>
+        <div id='codeTitle1' class="codeTitle" @click="changeShow('myPre2','codeTitle1')">查看代码</div>
         <pre id="myPre2">
           <code>
            html代码: {{htmlText[1]}}
@@ -50,6 +50,7 @@
 </template>
 
 <script>
+// import mapMutations from 'vuex'
 export default {
   name: 'HelloWorld',
   data () {
@@ -59,13 +60,15 @@ export default {
     }
   },
   methods: {
-    changeShow: function (key) {
-      this.$store._mutations.showCode[0](key)
+    // ...mapMutations(['showCode'])
+    // ,
+    changeShow: function (key, titleKey) {
+      this.Common.showCode(key, titleKey)
     }
   },
   computed: {
-    getTitle () {
-      return this.$store.getters.getTitle
+    getTitle (index) {
+      return this.$store.getters.getTitle(index)
     }
   }
 }

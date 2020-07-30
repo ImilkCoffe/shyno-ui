@@ -6,9 +6,9 @@
         <div class="codeTitle" @click="changeShow('myPre1')">{{getTitle}}代码</div>
         <pre id="myPre1">
           <code>
+            {{msgData}}
       </code>
       <code>
-
       </code>
     </pre>
        <p class='fontP bg'><span class="tip2">有背景色</span></p>
@@ -34,7 +34,7 @@ export default {
       htmlText: ["<p class='fontP tip1'>无背景色</p>", "<p class='fontP bg'><span class='tip2'>有背景色</span></p>"]
     }
   },
-  props: ['data'],
+  props: ['msgData'],
   methods: {
     changeShow: function (key) {
       this.$store._mutations.showCode[0](key)
