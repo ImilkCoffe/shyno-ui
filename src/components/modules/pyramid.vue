@@ -3,7 +3,7 @@
     <div class="typeTitle">菱形11</div>
     <div class="describe">
         <p class='fontP tip1'>无背景色</p>
-        <div class="codeTitle" @click="changeShow('myPre1')">{{getTitle}}代码</div>
+        <div id='codeTitle0' class="codeTitle" @click="changeShow('myPre1','codeTitle0')">查看代码</div>
         <pre id="myPre1">
           <code>
             {{msgData}}
@@ -12,7 +12,7 @@
       </code>
     </pre>
        <p class='fontP bg'><span class="tip2">有背景色</span></p>
-        <div class="codeTitle" @click="changeShow('myPre2')">{{getTitle}}代码</div>
+        <div id='codeTitle1' class="codeTitle" @click="changeShow('myPre2','codeTitle1')">查看代码</div>
         <pre id="myPre2">
           <code>
 
@@ -36,8 +36,8 @@ export default {
   },
   props: ['msgData'],
   methods: {
-    changeShow: function (key) {
-      this.$store._mutations.showCode[0](key)
+    changeShow: function (key, titleKey) {
+      this.Common.showCode(key, titleKey)
     }
   },
   computed: {

@@ -14,8 +14,8 @@ export default {
     }
   },
   methods: {
-    changeShow: function (key) {
-      this.$store._mutations.showCode[0](key)
+    changeShow: function (key, titleKey) {
+      this.Common.showCode(key, titleKey)
     }
   },
   computed: {
