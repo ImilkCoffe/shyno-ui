@@ -261,7 +261,6 @@ export default {
   methods: {
     // ...mapMutations(['showCode']),
     changeShow: function (key, titleKey) {
-      console.log('你好', key, titleKey)
       this.Common.showCode(key, titleKey)
     },
     chartsInit: function () {
