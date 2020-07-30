@@ -37,6 +37,9 @@ export default {
   created: function () {},
   mounted: function () {
 
+  },
+  components: {
+
   }
 }
 </script>

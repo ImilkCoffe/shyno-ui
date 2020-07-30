@@ -1,6 +1,6 @@
 # shyno-ui
 
-> A Vue.js project
+> 个人业务组件库
 
 ## Build Setup
 

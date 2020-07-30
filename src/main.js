@@ -10,11 +10,13 @@ import './assets/css/common.css'
 import 'font-awesome/css/font-awesome.min.css'
 import commonJs from './assets/js/common.js'
 import store from './store'
+import Pyramid from './components/modules/pyramid.vue'
 
 Vue.use(ElementUI)
 
 Vue.config.productionTip = false
 Vue.prototype.Common = commonJs
+Vue.component('Pyramid', Pyramid)
 
 /* eslint-disable no-new */
 new Vue({
