@@ -6,6 +6,10 @@ Vue.use(Router)
 const muneData = require('@/assets/js/mune.js')
 let routes = []
 muneData.forEach(item => {
+  routes.push({
+    path: '/',
+    component: () => import(`@/components/index`)
+  })
   item.moduleList.forEach(item1 => {
     routes.push({
       path: `/${item1.component}`,

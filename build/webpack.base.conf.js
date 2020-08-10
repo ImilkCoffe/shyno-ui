@@ -52,6 +52,11 @@ module.exports = {
         include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
       },
       {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader',
+        exclude: /node_modules/
+},
+      {
         test: /\.sass$/,
         loaders: ['style', 'css', 'sass']
       },
@@ -64,7 +69,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac|woff|svg|eot|ttf)(\?.*)?$/,
         loader: 'url-loader',
         options: {
           limit: 10000,

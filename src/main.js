@@ -12,17 +12,18 @@ import 'font-awesome/css/font-awesome.min.css'
 import store from './store'
 import componentList from './assets/js/components'
 import commonJs from './assets/js/common'
-// import mapMutations from 'vuex'
-// import Pyramid from './components/modules/pyramid.vue'
+import {mapMutations} from 'vuex'
 
-Vue.use(ElementUI)
+Vue.use(ElementUI, {
+  size: 'small'
+})
 
 Vue.config.productionTip = false
 Vue.prototype.Common = commonJs
-// Vue.prototype.$mapMutations = mapMutations
+Vue.prototype.$mapMutations = mapMutations
 // 全局组件注册
 componentList.forEach(item => {
-  Vue.component('Pyramid', item)
+  Vue.component(item.name, item.component)
 })
 
 /* eslint-disable no-new */

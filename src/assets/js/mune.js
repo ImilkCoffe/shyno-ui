@@ -18,11 +18,20 @@ const muneData = [
     ]
   },
   {
-    name: 'css',
+    name: 'elementUi',
     moduleList: [
       {
-        title: '金字塔布局',
-        component: 'pyramid'
+        title: '动态table修改与提交',
+        component: 'table'
+      }
+    ]
+  },
+  {
+    name: 'canvas',
+    moduleList: [
+      {
+        title: '播放器时间轴',
+        component: 'timer'
       }
     ]
   }

@@ -36,7 +36,7 @@ export default {
   },
   created: function () {},
   mounted: function () {
-
+    console.log('嗯呵', this.$mapMutations)
   },
   components: {
 
@@ -78,7 +78,7 @@ export default {
 }
 #content {
   width: 100%;
-  height: 885px;
+  height:800px;
   overflow: hidden;
   display: flex;
   /* background-color: aquamarine; */
