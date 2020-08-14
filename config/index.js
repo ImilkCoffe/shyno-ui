@@ -19,6 +19,13 @@ module.exports = {
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
+    //解决[WDS] Disconnected!问题
+    headers:{
+      'Access-Control-Allow-Origin':'*'
+    },
+    hotOnly:false,
+    disableHostCheck:true,
+    //
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
 
     // Use Eslint Loader?

@@ -32,6 +32,14 @@ const muneData = [
       {
         title: '播放器时间轴',
         component: 'timer'
+      },
+      {
+        title: '工件模型图',
+        component: 'timerTable'
+      },
+      {
+        title: '时间区间标',
+        component: 'timerSection'
       }
     ]
   }

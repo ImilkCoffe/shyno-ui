@@ -8,14 +8,14 @@
                     style="width: 100%; margin-top: 20px">
                 <el-table-column
                         prop="rm"
-                        label="平均回弹值Rm">
+                        label="">
                 </el-table-column>
                 <el-table-column
                         prop="avgV"
-                        label="测区混凝土强度换算值">
+                        label="强度换算">
                     <el-table-column
                             prop="avgV"
-                            label="平均碳化深度值">
+                            label="深度值">
                         <el-table-column
                                 prop="dm0"
                                 label="0.0">
